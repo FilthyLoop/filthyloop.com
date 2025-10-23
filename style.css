@@ -34,7 +34,7 @@ body {
   left: 0;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.98);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,6 +87,7 @@ body {
   background-color: #e0e0e0;
   transform: translateY(-2px);
 }
+
 
 
 
