@@ -33,13 +33,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100dvh; /* dynamic viewport height for mobile Safari */
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000; /* Above everything else */
+  z-index: 2000;
+  inset: 0; /* ensures full coverage */
+  backdrop-filter: blur(4px); /* optional, adds a nice soft blur behind */
 }
+
 
 .age-gate-content {
   text-align: center;
@@ -65,6 +68,7 @@ body {
 .age-gate button:hover {
   background: #ddd;
 }
+
 
 
 
