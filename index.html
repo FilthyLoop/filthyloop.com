@@ -8,11 +8,26 @@
 </head>
 <body>
   <div class="gallery">
-    <img src="gifs/sample2.gif" alt="Sample GIF" loading="lazy" />
-    <img src="gifs/sample.gif" alt="Sample GIF" loading="lazy" />
+    <script>
+  fetch('gifs/filenames.txt')
+    .then(response => response.text())
+    .then(text => {
+      const gallery = document.querySelector('.gallery');
+      const filenames = text.trim().split('\n');
+      filenames.forEach(name => {
+        const img = document.createElement('img');
+        img.src = `gifs/${name.trim()}`;
+        img.loading = 'lazy';
+        img.style.width = '100%';
+        img.style.display = 'block';
+        gallery.appendChild(img);
+      });
+    });
+</script>
   </div>
 </body>
 </html>
+
 
 
 
