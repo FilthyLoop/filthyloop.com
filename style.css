@@ -25,8 +25,9 @@ body {
   width: 100vw;     /* full viewport width */
   max-width: 100%;  /* don’t exceed container width */
   height: auto;     /* height scales automatically */
-  margin: 0;        /* no extra spacing */
+  margin: 8px 0;        /* no extra spacing */
 }
+
 
 
 
