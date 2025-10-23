@@ -8,16 +8,19 @@ body {
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 0;          /* no gap between GIFs */
+  gap: 0;        /* space between GIFs, optional */
+  padding: 0;    /* remove any default padding */
 }
 
 
 .gallery img {
-  width: 100vw;     /* Full viewport width */
-  height: 100vh;    /* Full viewport height */
-  object-fit: cover; /* Keep aspect ratio, fill screen */
-  display: block;
-  margin: 0;
+  width: 100%;      /* fill the full width of the screen */
+  height: auto;     /* height scales automatically to maintain aspect ratio */
+  display: block;   /* removes inline spacing */
+  margin: 0;        /* no extra spacing around images */
 }
+
+
+
 
 
