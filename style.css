@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-color: #000;
@@ -8,17 +14,21 @@ body {
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 0;        /* space between GIFs, optional */
-  padding: 0;    /* remove any default padding */
+  padding: 0;
+  gap: 0;   /* optional space between GIFs */
+  margin: 0;
 }
 
 
 .gallery img {
-  width: 100%;      /* fill the full width of the screen */
-  height: auto;     /* height scales automatically to maintain aspect ratio */
   display: block;   /* removes inline spacing */
-  margin: 0;        /* no extra spacing around images */
+  width: 100vw;     /* full viewport width */
+  max-width: 100%;  /* don’t exceed container width */
+  height: auto;     /* height scales automatically */
+  margin: 0;        /* no extra spacing */
 }
+
+
 
 
 
