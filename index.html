@@ -8,15 +8,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="ageGate" class="age-gate">
-  <div class="age-gate-content">
-    <p>⚠️ This website contains 18+ material.<br>Are you 18 or older?</p>
-    <div class="buttons">
+  
+ <div class="age-gate" id="ageGate">
+  <div class="age-content">
+    <div class="age-icon">⚠️</div>
+    <p>This site contains adult content. Are you 18 or older?</p>
+    <div class="age-buttons">
       <button id="yesButton">Yes</button>
       <button id="noButton">No</button>
     </div>
   </div>
 </div>
+
   <div class="gallery">
     <script>
   fetch('gifs/filenames.txt')
@@ -34,25 +37,27 @@
       });
     });
 </script>
-    <script>
+  </div>
+  <script>
   const ageGate = document.getElementById('ageGate');
   const yesButton = document.getElementById('yesButton');
   const noButton = document.getElementById('noButton');
 
+  // Block scrolling while popup is open
+  document.body.style.overflow = 'hidden';
+
   yesButton.addEventListener('click', () => {
-    localStorage.setItem('ageVerified', 'true');
     ageGate.style.display = 'none';
+    document.body.style.overflow = 'auto';
   });
 
   noButton.addEventListener('click', () => {
-    alert('You must be 18 or older to enter.');
-    window.location.href = 'https://google.com'; // redirect elsewhere
+    window.location.href = 'https://www.google.com';
   });
 </script>
-
-  </div>
 </body>
 </html>
+
 
 
 
