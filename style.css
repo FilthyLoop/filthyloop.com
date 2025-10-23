@@ -1,19 +1,23 @@
 body {
   margin: 0;
   background-color: #000;
+  scroll-behavior: smooth;
 }
+
 
 .gallery {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0;          /* no gap between GIFs */
 }
 
+
 .gallery img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+  width: 100vw;     /* Full viewport width */
+  height: 100vh;    /* Full viewport height */
+  object-fit: cover; /* Keep aspect ratio, fill screen */
   display: block;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  margin: 0;
 }
+
+
