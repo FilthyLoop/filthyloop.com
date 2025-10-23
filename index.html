@@ -38,6 +38,7 @@
     });
 </script>
   </div>
+  
   <script>
   const ageGate = document.getElementById('ageGate');
   const yesButton = document.getElementById('yesButton');
@@ -55,8 +56,21 @@
     window.location.href = 'https://www.google.com';
   });
 </script>
+  
+  <script>
+  // Fix for iOS Safari viewport bug (ensures full height overlay)
+  function fixMobileHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  fixMobileHeight();
+  window.addEventListener('resize', fixMobileHeight);
+</script>
+
 </body>
 </html>
+
 
 
 
