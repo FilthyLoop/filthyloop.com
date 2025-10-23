@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
