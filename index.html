@@ -33,9 +33,26 @@
       });
     });
 </script>
+    <script>
+  const ageGate = document.getElementById('ageGate');
+  const yesButton = document.getElementById('yesButton');
+  const noButton = document.getElementById('noButton');
+
+  yesButton.addEventListener('click', () => {
+    localStorage.setItem('ageVerified', 'true');
+    ageGate.style.display = 'none';
+  });
+
+  noButton.addEventListener('click', () => {
+    alert('You must be 18 or older to enter.');
+    window.location.href = 'https://google.com'; // redirect elsewhere
+  });
+</script>
+
   </div>
 </body>
 </html>
+
 
 
 
